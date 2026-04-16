@@ -15,7 +15,7 @@ admin_bot = telebot.TeleBot(ADMIN_TOKEN, num_threads=20)
 # ==========================================================
 # 2. إعدادات قاعدة البيانات (Local vs Cloud)
 # ==========================================================
-CLOUD_URI = "mongodb+srv://ZoneGift:<db_password>@zonegift.tl52cyk.mongodb.net/?appName=ZoneGift"
+CLOUD_URI = "mongodb+srv://ZoneGift:hTvvB0KrtIbeKDX8@zonegift.tl52cyk.mongodb.net/?appName=ZoneGift"
 USE_CLOUD = True
 
 try:
