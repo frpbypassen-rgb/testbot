@@ -15,15 +15,14 @@ admin_bot = telebot.TeleBot(ADMIN_TOKEN, num_threads=20)
 # ==========================================================
 # 2. إعدادات قاعدة البيانات (Local vs Cloud)
 # ==========================================================
-LOCAL_URI = "mongodb://localhost:27017/"
-CLOUD_URI = "mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority"
-USE_CLOUD = else 
+CLOUD_URI = "mongodb+srv://ZoneGift:<db_password>@zonegift.tl52cyk.mongodb.net/?appName=ZoneGift"
+USE_CLOUD = True
 
 try:
     uri = CLOUD_URI if USE_CLOUD else LOCAL_URI
     client = MongoClient(uri)
     client.server_info()
-    db = client['AlAhram_DB']
+    db = client['ZoneGift']
     print(f"✅ [Database] تم الاتصال بنجاح. الوضع: {'☁️ سحابي' if USE_CLOUD else '💻 محلي'}")
 except Exception as e:
     print(f"❌ [Error] فشل الاتصال بقاعدة البيانات: {e}")
