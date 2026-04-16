@@ -17,7 +17,7 @@ admin_bot = telebot.TeleBot(ADMIN_TOKEN, num_threads=20)
 # ==========================================================
 LOCAL_URI = "mongodb://localhost:27017/"
 CLOUD_URI = "mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority"
-USE_CLOUD = False 
+USE_CLOUD = else 
 
 try:
     uri = CLOUD_URI if USE_CLOUD else LOCAL_URI
